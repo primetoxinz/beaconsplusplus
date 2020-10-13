@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.madxmike.beaconsplusplus.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BeaconBlockEntityAccessor",
+    "BeaconBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

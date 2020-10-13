@@ -1,0 +1,4 @@
+accessWidener v1 named
+
+extendable method net/minecraft/block/entity/BeaconBlockEntity updateLevel (III)V
+extendable method net/minecraft/block/entity/BeaconBlockEntity applyPlayerEffects ()V
