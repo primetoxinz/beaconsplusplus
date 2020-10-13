@@ -64,6 +64,9 @@ public class BeaconBlockEntity extends net.minecraft.block.entity.BeaconBlockEnt
 
     @Override
     protected void applyPlayerEffects() {
+        if(this.world.isClient) {
+            return;
+        }
         Effect<?> currentEffect = EffectRegistry.getEffect(this.currentTag);
 
         if(currentEffect != null) {

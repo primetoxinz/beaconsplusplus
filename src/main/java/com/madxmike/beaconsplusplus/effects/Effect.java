@@ -13,6 +13,7 @@ public interface Effect<T extends Entity> {
     String getName();
 
     void apply(WorldAccess world, BlockPos pos, int level);
+
     default double getRange(int level) {
         return level * 10 + 10;
     }

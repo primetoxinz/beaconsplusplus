@@ -1,7 +1,6 @@
 package com.madxmike.beaconsplusplus;
 
-import com.madxmike.beaconsplusplus.effects.EffectRegistry;
-import com.madxmike.beaconsplusplus.effects.HasteEffect;
+import com.madxmike.beaconsplusplus.effects.*;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.tag.TagRegistry;
@@ -24,6 +23,9 @@ public class BeaconsPlusPlus implements ModInitializer {
         BEACON_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "beaconsplusplus", BlockEntityType.Builder.create(BeaconBlockEntity::new, Blocks.BEACON).build(null));
         System.out.println("Hello Fabric world!");
 
-        EffectRegistry.RegisterEffect(HasteEffect.class, TagRegistry.block(new Identifier("minecraft", "beacon_base_blocks")));
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("beaconplusplus", "subdue"), SubdueEffect.SUBDUE);
+        EffectRegistry.RegisterEffect(HasteEffect.class, TagRegistry.block(new Identifier("beaconsplusplus", "beacon_haste")));
+        EffectRegistry.RegisterEffect(SaturationEffect.class, TagRegistry.block(new Identifier("beaconsplusplus", "beacon_saturation")));
+        EffectRegistry.RegisterEffect(SubdueEffect.class, TagRegistry.block(new Identifier("beaconsplusplus", "beacon_subdue")));
     }
 }

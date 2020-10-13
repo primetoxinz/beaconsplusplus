@@ -42,6 +42,7 @@ public class EffectRegistry {
 
     @NotNull
     public static Optional<Tag<Block>> getTag(BlockState blockState) {
+
         return REGISTERED_EFFECTS.keySet().stream().filter(blockState::isIn).findAny();
     }
 }
