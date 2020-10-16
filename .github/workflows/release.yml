@@ -26,6 +26,6 @@ jobs:
         if: ${{ success() }}
         with:
           files: build/libs/*.jar
-          fail_on_unmatched_files: true
+          tag_name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
