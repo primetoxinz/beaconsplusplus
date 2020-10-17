@@ -25,28 +25,33 @@ public class BeaconsPlusPlus implements ModInitializer {
     @Override
     public void onInitialize() {
         BEACON_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, MOD_ID, BlockEntityType.Builder.create(BeaconBlockEntity::new, Blocks.BEACON).build(null));
-        System.out.println("Hello Fabric world!");
 
-
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.HASTE, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.GLOWING, HostileEntity.class));
         EffectRegistry.register(new PotionEffect<>(StatusEffects.SPEED, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.STRENGTH, PlayerEntity.class));
         EffectRegistry.register(new PotionEffect<>(StatusEffects.JUMP_BOOST, PlayerEntity.class));
+        EffectRegistry.register(new PotionEffect<>(StatusEffects.HASTE, PlayerEntity.class));
         EffectRegistry.register(new PotionEffect<>(StatusEffects.REGENERATION, PlayerEntity.class));
         EffectRegistry.register(new PotionEffect<>(StatusEffects.RESISTANCE, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.FIRE_RESISTANCE, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.WATER_BREATHING, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.INVISIBILITY, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.NIGHT_VISION, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.HEALTH_BOOST, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.ABSORPTION, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.SATURATION, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.GLOWING, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.LEVITATION, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.SLOW_FALLING, PlayerEntity.class));
-        EffectRegistry.register(new PotionEffect<>(StatusEffects.HERO_OF_THE_VILLAGE, PlayerEntity.class));
+        EffectRegistry.register(new PotionEffect<>(StatusEffects.STRENGTH, PlayerEntity.class));
+
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.GLOWING, HostileEntity.class).setRange(l -> l * 10));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.SPEED, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.STRENGTH, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.JUMP_BOOST, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.REGENERATION, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.RESISTANCE, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.FIRE_RESISTANCE, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.WATER_BREATHING, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.INVISIBILITY, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.NIGHT_VISION, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.HEALTH_BOOST, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.ABSORPTION, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.SATURATION, PlayerEntity.class)); TODO - Balance
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.LEVITATION, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.SLOW_FALLING, PlayerEntity.class));
+//        EffectRegistry.register(new PotionEffect<>(StatusEffects.HERO_OF_THE_VILLAGE, PlayerEntity.class)); TODO - Balance
 
         EffectRegistry.register(new CosmeticEffect());
     }
+
+
 }

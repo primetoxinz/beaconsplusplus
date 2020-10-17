@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:impermeable"
+    "minecraft:redstone_block"
   ]
 }

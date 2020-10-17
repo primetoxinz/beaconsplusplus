@@ -21,10 +21,10 @@ public class EffectRegistry {
     public static void register(Effect<?> effect, Tag<Block> tag) {
         Effect<?> current = REGISTERED_EFFECTS.putIfAbsent(tag, effect);
         if(current != null) {
-            BeaconsPlusPlus.LOGGER.info(effect.getName() + " was already registered for " + tag.toString() );
+            BeaconsPlusPlus.LOGGER.info("Beacon effect " + effect.getName() + " was already registered");
             return;
         }
-        BeaconsPlusPlus.LOGGER.info("Registered effect " + effect.getName() + " for tag " + tag.toString());
+        BeaconsPlusPlus.LOGGER.info("Registered beacon effect " + effect.getName());
     }
 
     public static void register(Effect<?> effect, String namespace, String tagName) {
