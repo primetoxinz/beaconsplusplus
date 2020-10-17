@@ -22,7 +22,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew jar
       - name: Get Version
-        run: grep mod_version gradle.properties | awk -F= '{ print $2 }' >> version.txt
+        run: grep mod_version gradle.properties >> $GITHUB_ENV
       - name: Release to Github
         uses: actions/create-release@v1
         env:
@@ -30,6 +30,5 @@ jobs:
         if: ${{ success() }}
         with:
           files: build/libs/*.jar
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
+          tag_name: ${{ mod_version }}
+          release_name: Release ${{ mod_version }}
